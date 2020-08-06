@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	display: grid;
+	position: relative;
+	min-height: 100vh;
+	grid-template-columns: 240px auto;
+	grid-template-rows: 200px auto;
+	grid-template-areas: 
+		'sidebar header' 
+		'sidebar main'
+	;
+}
+
+
+@import 'main';
+@import 'sidebar';
+@import 'coupon'; 
+@import 'header';
+@import 'logo';
+@import 'media';
+
+
+
+
+
+
+
+

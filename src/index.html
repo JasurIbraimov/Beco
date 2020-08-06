@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Beco</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<!-- SideBar -->
+		<nav>
+			<ul class="sidebar">
+				<li class="sidebar__overlay"></li>
+				<li class="logo">
+					<svg class="logo__icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0)">
+						<path d="M24.9618 49.9615C38.7478 49.9615 49.9236 38.7858 49.9236 24.9997C49.9236 11.2137 38.7478 0.0379028 24.9618 0.0379028C11.1758 0.0379028 0 11.2137 0 24.9997C0 38.7858 11.1758 49.9615 24.9618 49.9615Z" fill="#34ABE0"/>
+						<path d="M50 25.0003C50 28.6559 49.2145 32.1281 47.8024 35.257C44.3363 42.9381 37.0953 48.5509 28.4443 49.7307C27.5233 49.8571 26.5859 49.9325 25.6364 49.9549C25.4377 49.9599 25.238 49.962 25.0383 49.962C15.886 49.962 7.885 45.0369 3.53959 37.693C3.13412 37.0063 2.75912 36.2993 2.41889 35.5728C1.99096 34.6569 1.61606 33.7114 1.29916 32.7383L33.9991 0.0384521L34.1305 1.74607L34.3709 4.85144L39.185 5.22537L39.5589 10.0385L44.372 10.4124L44.7459 15.2264L48.1234 15.4883C49.3327 18.4205 50 21.6319 50 25.0003Z" fill="#F9EED7"/>
+						<path d="M50 25.0003C50 28.6559 49.2144 32.1281 47.8023 35.257L23.2918 10.7455L33.999 0.0384521L34.1304 1.74607L34.3708 4.85144L39.1849 5.22537L39.5588 10.0385L44.3719 10.4124L44.7459 15.2264L48.1233 15.4883C49.3326 18.4205 50 21.6319 50 25.0003Z" fill="#FF525D"/>
+						<path d="M34.8375 37.3996L32.2374 34.7995C30.4238 32.9859 28.5552 33.5351 27.0168 35.0735C25.461 36.6304 24.9292 38.4806 26.7427 40.2931L29.3428 42.8941C31.1564 44.7066 33.0066 44.1759 34.5624 42.619C36.1008 41.0808 36.651 39.2132 34.8375 37.3996ZM32.9699 41.0257C32.4013 41.5942 31.7972 41.6482 31.193 41.044L28.592 38.4439C27.9878 37.8397 28.0428 37.2346 28.6103 36.6671C29.1789 36.0996 29.8013 36.0263 30.4055 36.6304L33.0066 39.2314C33.6108 39.8357 33.5374 40.4582 32.9699 41.0257ZM28.3912 49.4506L21.6332 29.799C21.5782 29.6349 21.4681 29.4883 21.3581 29.3782C20.7722 28.7924 19.8196 28.9748 19.3071 29.4883C18.977 29.8174 18.8313 30.2575 18.9953 30.7149L25.6361 49.9549C26.5857 49.9324 27.523 49.857 28.444 49.7308C28.4411 49.633 28.4238 49.5392 28.3912 49.4506ZM20.5338 39.9091L17.9337 37.308C16.1202 35.4955 14.2527 36.0446 12.7142 37.5831C11.1574 39.1399 10.6266 40.9892 12.4391 42.8026L15.0402 45.4027C16.8527 47.2163 18.703 46.6854 20.2597 45.1287C21.7982 43.5901 22.3474 41.7216 20.5338 39.9091ZM18.6663 43.5351C18.0988 44.1026 17.4936 44.1577 16.8894 43.5535L14.2893 40.9524C13.6841 40.3482 13.7391 39.744 14.3077 39.1766C14.8751 38.6091 15.4977 38.5357 16.1019 39.1398L18.703 41.7399C19.3072 42.3441 19.2337 42.9677 18.6663 43.5351Z" fill="#FFD15C"/>
+						</g>
+						<defs>
+						<clipPath id="clip0">
+						<rect width="50" height="50" fill="white"/>
+						</clipPath>
+						</defs>
+						</svg>		
+					<svg class="logo__title"  width="42" height="13" viewBox="0 0 42 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.152 6.288C6.74933 6.39467 7.256 6.70933 7.672 7.232C8.088 7.75467 8.296 8.34667 8.296 9.008C8.296 9.57333 8.14667 10.0853 7.848 10.544C7.56 10.992 7.13867 11.3493 6.584 11.616C6.02933 11.872 5.384 12 4.648 12H0.2V0.879999H4.44C5.19733 0.879999 5.848 1.008 6.392 1.264C6.936 1.52 7.34667 1.86667 7.624 2.304C7.90133 2.73067 8.04 3.21067 8.04 3.744C8.04 4.384 7.86933 4.91733 7.528 5.344C7.18667 5.77067 6.728 6.08533 6.152 6.288ZM2.024 5.552H4.28C4.87733 5.552 5.34133 5.41867 5.672 5.152C6.01333 4.87467 6.184 4.48 6.184 3.968C6.184 3.46667 6.01333 3.07733 5.672 2.8C5.34133 2.512 4.87733 2.368 4.28 2.368H2.024V5.552ZM4.488 10.512C5.10667 10.512 5.592 10.3627 5.944 10.064C6.296 9.76533 6.472 9.34933 6.472 8.816C6.472 8.272 6.28533 7.84 5.912 7.52C5.53867 7.2 5.04267 7.04 4.424 7.04H2.024V10.512H4.488ZM12.1021 2.352V5.616H15.9421V7.104H12.1021V10.512H16.4221V12H10.2781V0.863999H16.4221V2.352H12.1021ZM18.0608 6.416C18.0608 5.328 18.3114 4.352 18.8128 3.488C19.3248 2.624 20.0128 1.952 20.8768 1.472C21.7514 0.981332 22.7061 0.735999 23.7408 0.735999C24.9248 0.735999 25.9754 1.02933 26.8928 1.616C27.8208 2.192 28.4928 3.01333 28.9088 4.08H26.7168C26.4288 3.49333 26.0288 3.056 25.5168 2.768C25.0048 2.48 24.4128 2.336 23.7408 2.336C23.0048 2.336 22.3488 2.50133 21.7728 2.832C21.1968 3.16267 20.7434 3.63733 20.4128 4.256C20.0928 4.87467 19.9328 5.59467 19.9328 6.416C19.9328 7.23733 20.0928 7.95733 20.4128 8.576C20.7434 9.19467 21.1968 9.67467 21.7728 10.016C22.3488 10.3467 23.0048 10.512 23.7408 10.512C24.4128 10.512 25.0048 10.368 25.5168 10.08C26.0288 9.792 26.4288 9.35467 26.7168 8.768H28.9088C28.4928 9.83467 27.8208 10.656 26.8928 11.232C25.9754 11.808 24.9248 12.096 23.7408 12.096C22.6954 12.096 21.7408 11.856 20.8768 11.376C20.0128 10.8853 19.3248 10.208 18.8128 9.344C18.3114 8.48 18.0608 7.504 18.0608 6.416ZM36.1158 12.112C35.0811 12.112 34.1264 11.872 33.2518 11.392C32.3878 10.9013 31.6998 10.224 31.1878 9.36C30.6864 8.48533 30.4358 7.504 30.4358 6.416C30.4358 5.328 30.6864 4.352 31.1878 3.488C31.6998 2.624 32.3878 1.952 33.2518 1.472C34.1264 0.981332 35.0811 0.735999 36.1158 0.735999C37.1611 0.735999 38.1158 0.981332 38.9798 1.472C39.8544 1.952 40.5424 2.624 41.0438 3.488C41.5451 4.352 41.7958 5.328 41.7958 6.416C41.7958 7.504 41.5451 8.48533 41.0438 9.36C40.5424 10.224 39.8544 10.9013 38.9798 11.392C38.1158 11.872 37.1611 12.112 36.1158 12.112ZM36.1158 10.528C36.8518 10.528 37.5078 10.3627 38.0838 10.032C38.6598 9.69067 39.1078 9.21067 39.4278 8.592C39.7584 7.96267 39.9238 7.23733 39.9238 6.416C39.9238 5.59467 39.7584 4.87467 39.4278 4.256C39.1078 3.63733 38.6598 3.16267 38.0838 2.832C37.5078 2.50133 36.8518 2.336 36.1158 2.336C35.3798 2.336 34.7238 2.50133 34.1478 2.832C33.5718 3.16267 33.1184 3.63733 32.7878 4.256C32.4678 4.87467 32.3078 5.59467 32.3078 6.416C32.3078 7.23733 32.4678 7.96267 32.7878 8.592C33.1184 9.21067 33.5718 9.69067 34.1478 10.032C34.7238 10.3627 35.3798 10.528 36.1158 10.528Z" fill="#333333"/>
+						</svg>							
+				</li>
+				<li class="sidebar__item">
+					<svg class="sidebar__item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10 3H3V10H10V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M21 3H14V10H21V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M21 14H14V21H21V14Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10 14H3V21H10V14Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					<span class="sidebar__item-title">Каталог</span>
+				</li>
+				<li class="sidebar__item">
+					<svg class="sidebar__item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 12H18L15 21L9 3L6 12H2" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					<span class="sidebar__item-title">Здоровье</span>
+				</li>
+				<li class="sidebar__item">
+					<svg class="sidebar__item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.60999C2.1283 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>						
+					<span class="sidebar__item-title">Красота</span>
+				</li>
+				<li class="sidebar__item ">
+					<svg class="sidebar__item-icon" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 23V19.13C16.0375 18.6532 15.9731 18.1738 15.811 17.7238C15.6489 17.2738 15.3929 16.8634 15.06 16.52C18.2 16.17 21.5 14.98 21.5 9.52C21.4997 8.12383 20.9627 6.7812 20 5.77C20.4559 4.54851 20.4236 3.19835 19.91 2C19.91 2 18.73 1.65 16 3.48C13.708 2.85882 11.292 2.85882 9 3.48C6.27 1.65 5.09 2 5.09 2C4.57638 3.19835 4.54414 4.54851 5 5.77C4.03013 6.7887 3.49252 8.14346 3.5 9.55C3.5 14.97 6.8 16.16 9.94 16.55C9.611 16.89 9.35726 17.2954 9.19531 17.7399C9.03335 18.1844 8.96681 18.6581 9 19.13V23M9 20C4 21.5 4 17.5 2 17L9 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<span class="sidebar__item-title">Развлечения</span>
+				</li>
+				<li class="sidebar__item">
+					<svg class="sidebar__item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 3H1V16H16V3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M16 8H20L23 11V16H16V8Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M5.5 21C6.88071 21 8 19.8807 8 18.5C8 17.1193 6.88071 16 5.5 16C4.11929 16 3 17.1193 3 18.5C3 19.8807 4.11929 21 5.5 21Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					<span class="sidebar__item-title">Авто</span>
+				</li>
+				<li class="sidebar__close">
+					<svg class="sidebar__close-bg" width="48" height="106" viewBox="0 0 48 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0C0 11.7415 9.99255 16.1938 20.8591 21.0356C33.809 26.8055 48 33.1285 48 53C48 72.8715 33.809 79.1945 20.8591 84.9644C9.99255 89.8062 0 94.2585 0 106V0Z" fill="#F3F4F9"/>
+						</svg>					
+					<div class="sidebar__close-btn"></div>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Header -->
+		<header class="header">
+			<h1 class="header__title">Каталог</h1>
+			<div class="header__search">
+				<button class="header__search-btn">
+					<svg class="header__search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4.16667 9.16667C4.16667 12.8486 7.15143 15.8333 10.8333 15.8333C14.5152 15.8333 17.5 12.8486 17.5 9.16667C17.5 5.48477 14.5152 2.5 10.8333 2.5C7.15143 2.5 4.16667 5.48477 4.16667 9.16667Z" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M2.5 17.5L6.125 13.875" stroke="#D6D6D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>			
+				<input class="header__search-input" placeholder="Какой магазин вам нужен?">
+			</div>
+		</header>
+
+		<!-- Main -->
+		<main class="main">
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">Пробка на мира</h2>
+						<p class="coupon__descr">Вечер на двоих</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>-50%</strong></p>
+						<p class="coupon__text">Скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/1.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">Кино и немцы</h2>
+						<p class="coupon__descr">Бесплатный бокал пива</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>варвар</strong></p>
+						<p class="coupon__text">промокод</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/2.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">valery cakes</h2>
+						<p class="coupon__descr">Торт</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>30%</strong></p>
+						<p class="coupon__text">Скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/3.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">sushi sell</h2>
+						<p class="coupon__descr">Набор “Праздник”</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>45%</strong></p>
+						<p class="coupon__text">Скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/4.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">mangosteen</h2>
+						<p class="coupon__descr">Фрукт в подарок</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>J130</strong></p>
+						<p class="coupon__text">купон</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/5.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">теленок табака</h2>
+						<p class="coupon__descr">Стейк “Мачете”</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>20%</strong></p>
+						<p class="coupon__text">скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/6.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">fire food</h2>
+						<p class="coupon__descr">Вторая шаурма в подарок</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>ОГОНЬ</strong></p>
+						<p class="coupon__text">промокод</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/7.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">aroma cremeria</h2>
+						<p class="coupon__descr">Джелато “Пармезан”</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>20%</strong></p>
+						<p class="coupon__text">Скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/8.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">пробка на мира</h2>
+						<p class="coupon__descr">Вечер для двоих</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>J130</strong></p>
+						<p class="coupon__text">КУПОН</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/1.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">Кино и немцы</h2>
+						<p class="coupon__descr">Бесплатный бокал пива</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>ВАРВАР</strong></p>
+						<p class="coupon__text">ПРОМОКОД</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/2.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">VALERY CAKES</h2>
+						<p class="coupon__descr">Торт</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>30%</strong></p>
+						<p class="coupon__text">скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/3.png" alt="Products">
+				</div>
+			</div>
+			<div class="coupon">
+				<div class="coupon__content">
+					<div class="coupon__header">
+						<h2 class="coupon__title">sushi sell</h2>
+						<p class="coupon__descr">Набор “Праздник”</p>
+					</div>
+					<div class="coupon__type">
+						<p class="coupon__action"><strong>45%</strong></p>
+						<p class="coupon__text">Скидка</p>
+					</div>
+				</div>
+				<div class="coupon__img">
+					<img src="assets/img/4.png" alt="Products">
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

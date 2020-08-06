@@ -1,0 +1,84 @@
+// Coupon
+.coupon {
+	width: 345px;
+	padding: 16px 20px;
+	border-radius: 10px;
+	max-height: 174px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+	border: 1px solid rgba($color: #000000, $alpha: .10);
+	background-color: #ffffff;
+	position: relative;
+	margin-bottom: 20px;
+	cursor: pointer;
+	transition: .2s all;
+	&:hover {
+		border: 1px solid #DF212D;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 9px 9px 9px 9px; 
+		border-color: #ffffff #ffffff #ffffff #00000018;  
+		left: 9px;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-width: 9px 9px 9px 9px; 
+		border-color: #ffffff #00000018 #ffffff #ffffff;  
+		right: -9px;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__content {
+		display: grid;
+		grid-template-rows: 70px 70px;
+	}
+	&__type {
+		align-self: end;
+	}
+	&__title {
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+	}
+	&__descr {
+		font-weight: 400;
+		left: 1px;
+		font-size: 16px;
+		color: rgba($color: #000000, $alpha: .5);
+	}
+	&__action {
+		font-size: 36px;
+		font-weight: 500;
+		color: #DF212D;
+		text-transform: uppercase;
+		line-height: 28px;
+	}
+	&__text {
+		font-size: 16px;
+		color: rgba($color: #000000, $alpha: .5);
+		letter-spacing: 0.4em;
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 1.5;
+	}
+	&__img {
+		position: absolute;
+		top: 10px;
+		right: 5px;
+		height: 161px;
+		width: 130px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}

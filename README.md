@@ -1,6 +1,8 @@
 # Beco
-When clone the project run :
+When clone this project, first run :
 - [x] npm i or npm install;
 
-This project uses gulp task-manager, so run this to get a build 
+You will install all dependencies.
+
+And this project uses gulp task-manager, so run this command below to get a build 
 - [x] gulp prod
